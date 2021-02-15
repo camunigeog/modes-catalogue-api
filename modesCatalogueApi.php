@@ -70,7 +70,7 @@ class modesCatalogueApi extends frontControllerApplication
 			'importsSectionsMode' => true,
 			
 			# Search
-			'availableGroupings' => array ('museum', 'art', 'archive', 'picturelibrary'),	// Each present as fields (column headings) in the spreadsheet
+			'availableGroupings' => array ('museum', 'art', 'picturelibrary', 'archives'),
 		);
 		
 		# Return the defaults
@@ -169,7 +169,7 @@ class modesCatalogueApi extends frontControllerApplication
 			  `id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'URL key',
 			  `collection` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Indicator used in records',
 			  `source` enum('manual','modes') COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Source',
-			  `grouping` enum('museum','picturelibrary','art','Both') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+			  `grouping` enum('museum','picturelibrary','art','archives','Both') COLLATE utf8mb4_unicode_ci DEFAULT NULL,
 			  `suppressed` int DEFAULT NULL COMMENT 'Whether to suppress from public view',
 			  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
 			  `abbreviation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
